@@ -1,0 +1,594 @@
+
+/* ===== Theme ===== */
+:root {
+    --maroon: #4a0924;
+    --deep-maroon: #290516;
+    --gold: #e9b94d;
+    --orange: #d65a26;
+    --cream: #fffaf0;
+    --pink-bg: #f8effb;
+    --text: #20152e;
+    --muted: #625a62;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--cream);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.25;
+}
+
+.eyebrow {
+    display: block;
+    color: #b83920;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section {
+    padding: 65px 6%;
+}
+
+/* ===== Header ===== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--deep-maroon);
+    color: var(--white);
+}
+
+.navbar {
+    min-height: 76px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.logo {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.84rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    background: var(--gold);
+    color: var(--deep-maroon);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: white;
+}
+
+/* ===== Hero ===== */
+.hero {
+    min-height: 470px;
+    padding: 75px 9%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(39, 4, 19, 0.94),
+            rgba(54, 10, 24, 0.72) 46%,
+            rgba(54, 10, 24, 0.10)
+        ),
+        url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=85")
+        center 45% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.hero .eyebrow {
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 5vw, 4.3rem);
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-content p {
+    max-width: 530px;
+    color: #f3e8e9;
+    font-size: 0.93rem;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--deep-maroon);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    position: absolute;
+    right: 8%;
+    top: 24%;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    transform: rotate(-8deg);
+}
+
+.hero-note span {
+    display: block;
+}
+
+/* ===== Section Headings ===== */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.section-heading h2,
+.about h2,
+.heritage h2 {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    margin-top: 5px;
+}
+
+.section-heading > p {
+    max-width: 400px;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+/* ===== Festivals ===== */
+.festivals {
+    background: var(--cream);
+}
+
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.festival-card {
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e6dac8;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.festival-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px #39200e18;
+}
+
+.festival-card img {
+    height: 175px;
+    transition: transform 0.4s;
+}
+
+.festival-card:hover img {
+    transform: scale(1.04);
+}
+
+.festival-info {
+    padding: 15px;
+}
+
+.festival-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+}
+
+.festival-info p {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.55;
+    min-height: 66px;
+    margin-bottom: 14px;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 8px 17px;
+    border-radius: 30px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.card-btn:hover {
+    opacity: 0.75;
+}
+
+.orange {
+    background: #ffdbbd;
+    color: #8c3411;
+}
+
+.pink {
+    background: #ffd6e1;
+    color: #9b2649;
+}
+
+.green {
+    background: #d9f8c4;
+    color: #275d20;
+}
+
+.purple {
+    background: #e8d7fb;
+    color: #51277a;
+}
+
+.yellow {
+    background: #eeec73;
+    color: yellow;
+}
+
+/* ===== Traditions ===== */
+.traditions {
+    background: #fff2cd;
+}
+
+.tradition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tradition-card {
+    text-align: center;
+    padding: 10px 18px 15px;
+    border-right: 1px solid #dfd0ac;
+}
+
+.tradition-card:last-child {
+    border-right: none;
+}
+
+.tradition-icon {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    background: white;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 0 4px #ffffffa0;
+}
+
+.dance {
+    border-color: #e8901c;
+    background: #fff0d4;
+}
+
+.art {
+    border-color: #ec648b;
+    background: #ffebf1;
+}
+
+.food {
+    border-color: #258d53;
+    background: #e6f7e9;
+}
+
+.rituals {
+    border-color: #9654ce;
+    background: #f2e6ff;
+}
+
+.tradition-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
+.tradition-card p {
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+/* ===== Regions ===== */
+.regions {
+    background: var(--pink-bg);
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.region-card {
+    position: relative;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    isolation: isolate;
+}
+
+.region-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to top,
+        rgba(19, 7, 15, 0.92),
+        rgba(19, 7, 15, 0) 80%
+    );
+}
+
+.region-card img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: -2;
+    transition: transform 0.5s;
+}
+
+.region-card:hover img {
+    transform: scale(1.08);
+}
+
+.region-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 18px;
+}
+
+.region-info h3 {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+}
+
+.region-info p {
+    font-size: 0.76rem;
+    color: #f7eaf0;
+}
+
+/* ===== Heritage Banner ===== */
+.heritage {
+    min-height: 300px;
+    display: grid;
+    place-items: center;
+    padding: 55px 8%;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(255, 211, 151, 0.58),
+            rgba(255, 211, 151, 0.58)
+        ),
+        url("https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+.heritage-content {
+    max-width: 600px;
+}
+
+.heritage h2 {
+    color: var(--deep-maroon);
+    margin: 6px 0 12px;
+}
+
+.heritage p {
+    color: #382321;
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+}
+
+.heritage .btn {
+    background: var(--maroon);
+    color: white;
+}
+
+.heritage .btn:hover {
+    background: var(--gold);
+    color: var(--deep-maroon);
+}
+
+/* ===== About ===== */
+.about {
+    text-align: center;
+    background: white;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 780px;
+    margin: auto;
+    color: var(--muted);
+}
+
+
+
+/* ===== Tablet ===== */
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .festival-grid,
+    .tradition-grid,
+    .region-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    .navbar {
+        gap: 12px;
+        padding: 15px 4%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-size: 0.77rem;
+    }
+
+    .nav-btn {
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 65px 7%;
+        background-position: 60% center;
+    }
+
+    .hero h1 {
+        font-size: 2.65rem;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .section {
+        padding: 48px 6%;
+    }
+
+    .festival-grid,
+    .tradition-grid,
+    .region-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .festival-card img {
+        height: 220px;
+    }
+
+    .festival-info p {
+        min-height: 0;
+    }
+
+    .tradition-card {
+        border-right: none;
+        border-bottom: 1px solid #dfd0ac;
+        padding: 22px 12px;
+    }
+
+    .tradition-card:last-child {
+        border-bottom: none;
+    }
+
+    .region-card {
+        height: 270px;
+    }
+
+    .heritage {
+        padding: 55px 7%;
+    }
+
+    .footer-grid {
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
